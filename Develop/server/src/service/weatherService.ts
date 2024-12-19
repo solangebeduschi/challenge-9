@@ -51,7 +51,7 @@ class WeatherService {
 
   constructor() {
     this.baseURL = 'https://api.weatherapi.com/v1';
-    this.apiKey = process.env.WEATHER_API_KEY;
+    this.apiKey = process.env.WEATHER_API_KEY ?? '';
     this.cityName = '';
   }
 

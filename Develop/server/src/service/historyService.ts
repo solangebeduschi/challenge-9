@@ -49,7 +49,7 @@ class HistoryService {
 
   async removeCity(id: string) {
     let cities = await this.read();
-    cities = cities.filter((city) => city.id !== id);
+    cities = cities.filter((city: { id: string; }) => city.id !== id);
     await this.write(cities);
   }
 
